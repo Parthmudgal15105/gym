@@ -7,6 +7,12 @@ I built Gym to keep my workouts, exercises, weights and reps in one local journa
 - Insights for recorded workouts, sets, muscle balance and exercise history
 - Local storage, JSON backup/restore, and a Swift/WebKit macOS wrapper
 
+## Try it online
+
+https://gym-journal-kappa.vercel.app
+
+The hosted app saves workouts in your browser. No sign-in or cloud sync.
+
 ## Try it locally
 
 ```sh
