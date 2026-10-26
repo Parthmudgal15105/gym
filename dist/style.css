@@ -144,3 +144,26 @@ header h1{margin:0;font-size:30px}header{margin-bottom:25px}.brand+nav{margin-to
 body.dark .insight-part-filter button.active{color:#ffe275;background:#443c23;border-color:#9c8738}body.dark .insight-exercise-option.active{background:#383426;border-color:#a58f3d}
 @media(max-width:850px){.insight-part-filter{gap:7px}.insight-part-filter button{font-size:11px;padding:9px 11px}.insight-exercise-option{gap:10px;padding:8px 10px 8px 8px}.insight-exercise-option .exercise-art{width:56px;height:56px}.insight-exercise-name strong{font-size:12px}.selection-dot{width:17px;height:17px;font-size:10px}}
 @media(max-width:580px){.insight-exercise-picker{grid-template-columns:1fr;gap:8px}.insight-exercise-option{min-height:76px}.insight-exercise-option .exercise-art{width:58px;height:58px}.insight-exercise-name strong{font-size:13px}.insight-part-filter button{padding:9px 10px;gap:7px}.insight-picker{margin-bottom:20px;padding-bottom:20px}.progress-panel .chart-controls{width:auto}.progress-panel #unit-select{width:100px;flex:none}}
+
+/* Let the web journal use the full viewport, including wide and tall screens. */
+main{max-width:none;min-width:0}
+@media(min-width:851px){
+  main{min-height:100dvh;display:flex;flex-direction:column}
+  main>header{flex-shrink:0}
+  #calendar-page{display:flex;flex:1;flex-direction:column;min-width:0}
+  #calendar-stats{flex-shrink:0}
+  #calendar-page>.workspace{flex:1;grid-template-columns:minmax(0,1fr) clamp(235px,18vw,320px)}
+  .calendar-panel{display:flex;flex-direction:column;min-width:0}
+  .calendar-heading,.calendar-instruction,.weekdays,.calendar-footer{flex-shrink:0}
+  #calendar{flex:1;grid-auto-rows:minmax(76px,1fr)}
+  #calendar .day{height:auto;min-height:76px}
+}
+@media(max-width:850px){
+  #calendar-page>.workspace{min-width:0}
+  .calendar-panel,.details{min-width:0}
+}
+@media(max-width:580px){
+  .header-actions{margin-left:auto}
+  .details{grid-template-columns:minmax(0,1fr)}
+  .details>.primary{grid-column:1;grid-row:auto;width:100%;margin-top:12px}
+}
